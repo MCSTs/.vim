@@ -48,6 +48,14 @@ set foldlevel=99
 set laststatus=2
 set autochdir
 
+" share clipboard with system
+" set clipboard=unnamedplus
+
+" copy shortcut key
+nnoremap Y y$
+vnoremap Y "+y
+
+
 " cursor back to the last time position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
@@ -165,6 +173,18 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " Rainbow
 Plug 'luochen1990/rainbow'
 
+" wildfier.vim
+Plug 'gcmt/wildfire.vim'
+" Sround-vim
+" https://github.com/tpope/vim-surround
+
+" Visual-multi
+Plug 'mg979/vim-visual-multi'
+
+" Undo tree
+Plug 'mbbill/undotree'
+
+
 call plug#end()
 " === End Plugins
 
@@ -250,7 +270,11 @@ let g:NERDTreeIndicatorMapCustom = {
 "silent! unmap <LEADER>ig
 "autocmd WinEnter * silent! unmap <LEADER>ig
 
-
+" ===
+" === Undotree
+" ===
+let g:undotree_DiffAutoOpen = 0
+map L :UndotreeToggle<CR>
 
 
 " ===
