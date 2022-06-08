@@ -1,0 +1,30 @@
+
+set gfn=Courier_New:h14
+set guioptions-=m	" hide menu
+set guioptions-=T	" hide toolbar
+
+" 缓存设置
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set noundofile		"禁止生成.un文件
+set nobackup        "设置不备份
+set noswapfile      "禁止生成临时文件
+set autoread        "文件在vim之外修改过，自动重新载入
+set autowrite       "设置自动保存
+set confirm         "在处理未保存或只读文件时，弹出确认
+set hidden 		"自动隐藏没有保存的缓冲区，切换buffer时不给出保存当前buffer的提示
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"gvim 字体/窗口设置
+set guifont=Consolas:h17:cDEFAULT " h18:b:c...(:b: ->粗体)
+
+" 光标不闪烁
+"set guicursor+=a:blinkon0
+
+set visualbell t_vb=  "关闭visual bell
+au GuiEnter * set t_vb= "关闭beep
+
+" 字符编码
+set termencoding=utf8
+set encoding=GBK
+set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
