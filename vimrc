@@ -184,6 +184,18 @@ Plug 'mg979/vim-visual-multi'
 " Undo tree
 Plug 'mbbill/undotree'
 
+" vim-terminal
+Plugin 'tc50cal/vim-terminal'
+
+" syntax check out
+Plugin 'dense-analysis/ale'
+
+" code smart complement
+" Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+" Plugin 'ycm-core/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
+
+
 
 call plug#end()
 " === End Plugins
@@ -275,6 +287,20 @@ let g:NERDTreeIndicatorMapCustom = {
 " ===
 let g:undotree_DiffAutoOpen = 0
 map L :UndotreeToggle<CR>
+
+
+" ===
+" === You Complete ME
+" ===
+"nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"nnoremap g/ :YcmCompleter GetDoc<CR>
+"nnoremap gt :YcmCompleter GetType<CR>
+"nnoremap gr :YcmCompleter GoToReferences<CR>
+"let g:ycm_autoclose_preview_window_after_completion=0
+"let g:ycm_autoclose_preview_window_after_insertion=1
+"let g:ycm_use_clangd = 1
+""let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
 
 
 " ===
