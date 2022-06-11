@@ -113,8 +113,8 @@ map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 " skip through
 map <C-j> 5j
 map <C-k> 5k
-map <C-h> 10h
-map <C-l> 10l
+map <C-h> 5h
+map <C-l> 5l
 
 " === split mapping
 map sl :set splitright<CR>:vsplit<CR>			
@@ -126,7 +126,7 @@ map <LEADER>l <C-w>l
 map <LEADER>h <C-w>h
 map <LEADER>k <C-w>k
 map <LEADER>j <C-w>j
-map <LEADER>q <C-w>q
+
 map sv <C-w>t<C-w>H 
 map sh <C-w>t<C-w>K
 
@@ -195,6 +195,11 @@ Plugin 'dense-analysis/ale'
 " Plugin 'ycm-core/YouCompleteMe'
 Plugin 'Valloric/YouCompleteMe'
 
+" vim -file icon
+Plugin 'ryanoasis/vim-devicons'
+
+" git-icon
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 
 call plug#end()
@@ -244,8 +249,8 @@ map <LEADER>gy :Goyo<CR>
 " === 
 map tt :NERDTreeToggle<CR>
 " change tree sign
-"let g:NERDTreeDirArrowExpandable = '+'
-"let g:NERDTreeDirArrowCollapsible = '-'
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
 " Window position
 let g:NERDTreeWinPos='left'
 " Window size
