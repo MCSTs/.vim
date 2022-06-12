@@ -201,6 +201,9 @@ Plug 'ryanoasis/vim-devicons'
 " git-icon
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+" Vim-Wiki
+Plug 'vimwiki/vimwiki'
+
 
 call plug#end()
 " === End Plugins
