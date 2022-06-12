@@ -162,7 +162,7 @@ Plug 'mhinz/vim-signify'
 Plug 'gisphm/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
 
 " Visual enhancement
-Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'nathanaelkane/vim-indent-guides'
 
 " distraction free writing mode
 Plug 'junegunn/goyo.vim' 
@@ -185,21 +185,21 @@ Plug 'mg979/vim-visual-multi'
 Plug 'mbbill/undotree'
 
 " vim-terminal
-Plugin 'tc50cal/vim-terminal'
+Plug 'tc50cal/vim-terminal'
 
 " syntax check out
-Plugin 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 
 " code smart complement
 " Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 " Plugin 'ycm-core/YouCompleteMe'
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 
 " vim -file icon
-Plugin 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 " git-icon
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 
 call plug#end()
