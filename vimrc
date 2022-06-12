@@ -147,6 +147,7 @@ map tk :tabprev<CR>
 " ===
 call plug#begin('~/.vim/plugged')
 
+
 " Decorate
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -178,14 +179,14 @@ Plug 'gcmt/wildfire.vim'
 " Sround-vim
 " https://github.com/tpope/vim-surround
 
-" Visual-multi
+" Visual-multi <--> <C-n>
 Plug 'mg979/vim-visual-multi'
 
-" Undo tree
+" Undo tree <--> L
 Plug 'mbbill/undotree'
 
 " vim-terminal
-Plug 'tc50cal/vim-terminal'
+" Plug 'tc50cal/vim-terminal'
 
 " syntax check out
 Plug 'dense-analysis/ale'
@@ -201,12 +202,30 @@ Plug 'ryanoasis/vim-devicons'
 " git-icon
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" Vim-Wiki
+" Vim-Wiki 
+" <==> filename.wiki : generate wiki with <Enter> key , backspace  key to return
 Plug 'vimwiki/vimwiki'
+
+
+" vim start startify
+" Plug 'mhinz/vim-startify'
+
+
+" quick comment 
+" <==> <Space>ci/n to comment...   <Space>ca to switch mode
+Plug 'preservim/nerdcommenter'
+
+" insert table 
+" <==> <Space>tm to switch mode ,  '|' to generate table
+Plug 'dhruvasagar/vim-table-mode'
+
+
 
 
 call plug#end()
 " === End Plugins
+
+
 
 
 
@@ -295,6 +314,17 @@ let g:NERDTreeIndicatorMapCustom = {
 " ===
 let g:undotree_DiffAutoOpen = 0
 map L :UndotreeToggle<CR>
+
+
+
+" ===
+" === Vim-table
+" ===
+"let g:table_mode_corner='|'
+"let g:table_mode_corner_corner='+'
+"let g:table_mode_header_fillchar='='
+
+
 
 
 " ===
