@@ -142,6 +142,30 @@ map tj :tabnext<CR>
 map tk :tabprev<CR>
 
 
+" === Compile and Run with C and C++
+map <F5> :call Compile()<CR>
+func! Compile()
+    exec "w"
+    if &filetype == 'c'
+        exec "AsyncRun gcc % -o %< -Wall"
+    elseif &filetype == 'cpp'
+        exec "AsyncRun g++ % -o %< -Wall"
+    endif
+endfunc
+
+
+map <F6> :call Run()<CR>
+func! Run()
+    if &filetype == 'c'
+        exec "AsyncRun -mode=term -pos=bottmo ./%<"
+    elseif &filetype == 'cpp'
+        exec "AsyncRun -mode=term -pos=bottmo ./%<"
+    endif
+endfunc
+
+
+
+
 " ===
 " === Install Plugins with Vim-Plug
 " ===
@@ -235,37 +259,19 @@ call plug#end()
 
 
 " ===
-" === Dress up my vim
+" === Snazzy
 " ===
-"map <LEADER>c1 :set background=dark<CR>:colorscheme snazzy<CR>:AirlineTheme dracula<CR>
-"map <LEADER>c2 :set background=light<CR>:colorscheme ayu<CR>:AirlineTheme ayu_light<CR>
-"
-"set termguicolors     " enable true colors support
-"let ayucolor="light"  " for light version of theme
-"" let ayucolor="mirage" " for mirage version of theme
-"" let ayucolor="dark"   " for dark version of theme
-"" let g:SnazzyTransparent = 1
+" let g:SnazzyTransparent = 1
 colorscheme snazzy
 set background=dark
-" let g:airline_theme='dracula'
-
-"let g:lightline = {
-"  \     'active': {
-"  \         'left': [['mode', 'paste' ], ['readonly', 'filename', 'modified']],
-"  \         'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding']]
-"  \     }
-"  \ }
-
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-
 
 
 " === 
 " === Goyo
 " === 
 map <LEADER>gy :Goyo<CR>
+
+
 
 
 " === 
@@ -285,6 +291,8 @@ let g:NERDTreeShowLineNumbers=1
 let g:NERDTreeHidden=1
 
 
+
+
 " ==
 " == NERDTree-git
 " ==
@@ -301,6 +309,8 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 
 
+
+
 " ===
 " === vim-indent-guide
 " ===
@@ -311,11 +321,14 @@ let g:NERDTreeIndicatorMapCustom = {
 "silent! unmap <LEADER>ig
 "autocmd WinEnter * silent! unmap <LEADER>ig
 
+
+
 " ===
 " === Undotree
 " ===
 let g:undotree_DiffAutoOpen = 0
 map L :UndotreeToggle<CR>
+
 
 
 
@@ -325,6 +338,14 @@ map L :UndotreeToggle<CR>
 "let g:table_mode_corner='|'
 "let g:table_mode_corner_corner='+'
 "let g:table_mode_header_fillchar='='
+
+
+
+"===
+"=== AsyncRun
+"===
+map <LEADER>w :AsyncRun 
+let g:asyncrun_open=8
 
 
 
@@ -353,4 +374,30 @@ map <LEADER>ck :Calendar -view=clock<CR>
 " ===
 " === rainbow
 " ===
-" let g:rainbow_active = 1
+"let g:rainbow_active = 1
+"let g:rainbow_conf = {
+"\   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+"\   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+"\   'operators': '_,_',
+"\   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+"\   'separately': {
+"\       '*': {},
+"\       'tex': {
+"\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+"\       },
+"\       'lisp': {
+"\           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+"\       },
+"\       'vim': {
+"\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+"\       },
+"\       'html': {
+"\           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+"\       },
+"\       'css': 0,
+"\   }
+"\}
+"
+"
+"
+"
