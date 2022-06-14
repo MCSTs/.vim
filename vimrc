@@ -230,10 +230,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " <==> filename.wiki : generate wiki with <Enter> key , backspace  key to return
 Plug 'vimwiki/vimwiki'
 
-
 " vim start startify
 " Plug 'mhinz/vim-startify'
-
 
 " quick comment 
 " <==> <Space>ci/n to comment...   <Space>ca to switch mode
@@ -247,6 +245,13 @@ Plug 'dhruvasagar/vim-table-mode'
 " calendar-vim
 " <==> :Calendar / E / T /?
 Plug 'itchyny/calendar.vim'
+
+" fzf
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
+
+
+
 
 call plug#end()
 " === End Plugins
@@ -266,12 +271,24 @@ colorscheme snazzy
 set background=dark
 
 
+
+" ===
+" === airline
+" ===
+"let g:airline_theme='angr'
+"let g:airline_theme='base16_harmonic16'
+let g:airline_theme='jellybeans'
+"let g:airline_theme='alduin'
+let g:airline_powerline_fonts = 1
+"let g:airline#extensions#tabline#enable = 1
+
+let g:airline#extensions#tabline#enabled = 1
+
+
 " === 
 " === Goyo
 " === 
 map <LEADER>gy :Goyo<CR>
-
-
 
 
 " === 
@@ -289,6 +306,7 @@ let g:NERDTreeWinSize=30
 let g:NERDTreeShowLineNumbers=1
 " Show hidden file
 let g:NERDTreeHidden=1
+
 
 
 
@@ -345,6 +363,7 @@ map L :UndotreeToggle<CR>
 "=== AsyncRun
 "===
 map <LEADER>w :AsyncRun 
+map <LEADER>tw :AsyncRun -mode=term 
 let g:asyncrun_open=8
 
 
