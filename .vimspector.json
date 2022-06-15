@@ -13,9 +13,18 @@
         "protocol": "auto",
         "stopOnEntry": true,
         "console": "integratedTerminal",
-        "program": "${workspaceRoot}/${fileBasenameNoExtension}",
+        "program": "${fileDirname}/${fileBasenameNoExtension}",
         "cwd": "${workspaceRoot}"
       }
     }
   }
 }
+
+/*
+    ${file}
+    ${fileBasename}
+    ${fileBasenameNoExtension}
+    ${fileDirname}
+    ${fileExtname}
+    ${cwd}
+*/
