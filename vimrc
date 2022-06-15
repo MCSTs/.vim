@@ -367,12 +367,30 @@ map <LEADER>tw :AsyncRun -mode=term
 let g:asyncrun_open=8
 
 
+" === vimspector
+"let g:vimspector_enable_mappings = 'HUMAN'
+nnoremap <Leader>dd :call vimspector#Launch()<CR>
+nnoremap <Leader>dq :call vimspector#Reset()<CR>
+nnoremap <Leader>dc :call vimspector#Continue()<CR>
+
+nnoremap <Leader>dt :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <Leader>dT :call vimspector#ClearBreakpoints()<CR>
+
+nmap <Leader>ds <Plug>VimspectorStop
+nmap <Leader>dp <Plug>VimspectorPause
+nmap <Leader>dr <Plug>VimspectorRestart
+nmap <Leader>dh <Plug>VimspectorStepOut
+nmap <Leader>dl <Plug>VimspectorStepInto
+nmap <Leader>dj <Plug>VimspectorStepOver
+
+
+
 
 " ===
 " === vim-Calendar
 " ===
-map <LEADER>cd :Calendar<CR>
-map <LEADER>ck :Calendar -view=clock<CR>
+map <LEADER>cd :Calendar -position=here<CR>
+map <LEADER>ck :Calendar -view=clock -position=here<CR>
 
 
 
