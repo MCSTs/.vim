@@ -115,6 +115,12 @@ map <C-j> 5j
 map <C-k> 5k
 map <C-h> 5h
 map <C-l> 5l
+noremap E $
+noremap <C-e> 5<C-e>
+noremap <C-y> 5<C-y>
+
+" switch case
+noremap ` ~
 
 " === split mapping
 map sl :set splitright<CR>:vsplit<CR>			
@@ -288,13 +294,13 @@ let g:airline#extensions#tabline#enabled = 1
 " === 
 " === Goyo
 " === 
-map <LEADER>gy :Goyo<CR>
+nmap <LEADER>gy :Goyo<CR>
 
 
 " === 
 " === NERDTree
 " === 
-map tt :NERDTreeToggle<CR>
+nmap tt :NERDTreeToggle<CR>
 " change tree sign
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
@@ -345,7 +351,7 @@ let g:NERDTreeIndicatorMapCustom = {
 " === Undotree
 " ===
 let g:undotree_DiffAutoOpen = 0
-map L :UndotreeToggle<CR>
+nmap L :UndotreeToggle<CR>
 
 
 
@@ -362,8 +368,8 @@ map L :UndotreeToggle<CR>
 "===
 "=== AsyncRun
 "===
-map <LEADER>w :AsyncRun 
-map <LEADER>tw :AsyncRun -mode=term 
+nmap <LEADER>w :AsyncRun 
+nmap <LEADER>tw :AsyncRun -mode=term 
 let g:asyncrun_open=8
 
 
