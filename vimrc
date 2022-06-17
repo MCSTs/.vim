@@ -257,6 +257,8 @@ Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 
 
+" vimspector
+Plugin 'puremourning/vimspector'
 
 
 call plug#end()
