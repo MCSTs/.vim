@@ -149,25 +149,36 @@ map tk :tabprev<CR>
 
 
 " === Compile and Run with C and C++
-map <F5> :call Compile()<CR>
+map <Leader>,c :call Compile()<CR>
 func! Compile()
     exec "w"
     if &filetype == 'c'
-        exec "AsyncRun gcc % -o %< -Wall"
+        exec "AsyncRun cc % -o %< -Wall -g"
     elseif &filetype == 'cpp'
-        exec "AsyncRun g++ % -o %< -Wall"
+        exec "AsyncRun g++ % -o %< -Wall -g"
     endif
 endfunc
 
 
-map <F6> :call Run()<CR>
+map <Leader>,r :call Run()<CR>
 func! Run()
     if &filetype == 'c'
-        exec "AsyncRun -mode=term -pos=bottmo ./%<"
+        exec "AsyncRun -mode=term -pos=bottmo -rows=12 ./%<"
     elseif &filetype == 'cpp'
-        exec "AsyncRun -mode=term -pos=bottmo ./%<"
+        exec "AsyncRun -mode=term -pos=bottmo -rows=12 ./%<"
     endif
 endfunc
+
+
+map <F5> :call CompileAndRun()<CR>
+func! CompileAndRun()
+    if &filetype == 'c'
+        exec "AsyncRun -mode=term -pos=bottmo -rows=12 cc % -o %< -Wall -g && ./%<"
+    elseif &filetype == 'cpp'
+        exec "AsyncRun -mode=term -pos=bottmo -rows=12 g++ % -o %< -Wall -g && ./%<"
+    endif
+endfunc
+
 
 
 
@@ -269,7 +280,7 @@ Plug 'puremourning/vimspector'
 Plug 'gelguy/wilder.nvim'
 
 " vim-cursorword
-Plug 'itchyny/vim-cursorword'
+"Plug 'itchyny/vim-cursorword'
 
 
 
