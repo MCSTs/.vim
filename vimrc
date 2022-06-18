@@ -192,14 +192,19 @@ Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 Plug 'gisphm/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
 
-" Visual enhancement
-" Plug 'nathanaelkane/vim-indent-guides'
 
 " distraction free writing mode
 Plug 'junegunn/goyo.vim' 
 
 " File navigation
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+" code-indentLine
+Plug 'Yggdroot/indentLine'
+
+" vim-move
+Plug 'matze/vim-move'
+
 
 " Rainbow
 Plug 'luochen1990/rainbow'
@@ -253,12 +258,19 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'itchyny/calendar.vim'
 
 " fzf
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 
 " vimspector
-Plugin 'puremourning/vimspector'
+Plug 'puremourning/vimspector'
+
+" wilder
+Plug 'gelguy/wilder.nvim'
+
+" vim-cursorword
+Plug 'itchyny/vim-cursorword'
+
 
 
 call plug#end()
@@ -336,16 +348,35 @@ let g:NERDTreeIndicatorMapCustom = {
 
 
 
+" ==
+" == indentLine
+" ==
+" default to close
+let g:indentLine_enabled = 0
+
+" switch, on-off
+nnoremap <Leader>lc :IndentLinesToggle<CR>
+
+"indent charactor with 'x'
+"let g:indentLine_char = 'c'
+
+" different level indent 'x'
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+
+
 
 " ===
-" === vim-indent-guide
+" === wilder
 " ===
-"let g:indent_guides_guide_size = 1
-"let g:indent_guides_start_level = 2
-"let g:indent_guides_enable_on_vim_startup = 1
-"let g:indent_guides_color_change_percent = 1
-"silent! unmap <LEADER>ig
-"autocmd WinEnter * silent! unmap <LEADER>ig
+call wilder#setup({'modes': [':', '/', '?']})
+
+
+" ===
+" === vim-move
+" ===
+" move in visual mode
+let g:move_key_modifier_visualmode = 'S'
 
 
 
@@ -354,6 +385,7 @@ let g:NERDTreeIndicatorMapCustom = {
 " ===
 let g:undotree_DiffAutoOpen = 0
 nmap L :UndotreeToggle<CR>
+
 
 
 
