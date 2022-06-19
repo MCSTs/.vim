@@ -172,6 +172,7 @@ endfunc
 
 map <F5> :call CompileAndRun()<CR>
 func! CompileAndRun()
+    exec "w"
     if &filetype == 'c'
         exec "AsyncRun -mode=term -pos=bottmo -rows=12 cc % -o %< -Wall -g && ./%<"
     elseif &filetype == 'cpp'
@@ -269,8 +270,8 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'itchyny/calendar.vim'
 
 " fzf
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 
 " vimspector
@@ -339,6 +340,17 @@ let g:NERDTreeShowLineNumbers=1
 let g:NERDTreeHidden=1
 
 
+
+
+" ===
+" ===FZF 
+" ===
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <Leader>f :Rg<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <Leader>/ :BLines<CR>
+nnoremap <silent> <Leader>hh :History<CR>
+nnoremap <silent> <Leader>h: :History:<CR>
 
 
 
@@ -410,6 +422,7 @@ nmap L :UndotreeToggle<CR>
 
 
 
+
 "===
 "=== AsyncRun
 "===
@@ -417,8 +430,19 @@ nmap <LEADER>w :AsyncRun
 nmap <LEADER>tw :AsyncRun -mode=term 
 let g:asyncrun_open=8
 
+"=== quickfix
+nnoremap <silent> <Leader>q :copen<CR>
+nnoremap <silent> <Leader>Q :cclose<CR>
 
+" grep ==> Ripgrep 'rg'
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+
+
+
+
+" === 
 " === vimspector
+" === 
 "let g:vimspector_enable_mappings = 'HUMAN'
 nnoremap <Leader>dd :call vimspector#Launch()<CR>
 nnoremap <Leader>dq :call vimspector#Reset()<CR>
@@ -462,7 +486,7 @@ map <LEADER>ck :Calendar -view=clock -position=here<CR>
 " ===
 " === rainbow
 " ===
-"let g:rainbow_active = 1
+let g:rainbow_active = 1
 "let g:rainbow_conf = {
 "\   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
 "\   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
