@@ -51,6 +51,12 @@ set autochdir
 " share clipboard with system
 " set clipboard=unnamedplus
 
+
+" close visual bell & beep
+"set visualbell t_vb=
+"au GuiEnter * set t_vb=
+
+
 " copy shortcut key
 nnoremap Y y$
 vnoremap Y "+y
@@ -283,6 +289,9 @@ Plug 'gelguy/wilder.nvim'
 " vim-cursorword
 "Plug 'itchyny/vim-cursorword'
 
+" polyglot
+" A collection of language packs for Vim
+Plug 'sheerun/vim-polyglot'
 
 
 call plug#end()
@@ -292,7 +301,7 @@ call plug#end()
 
 
 
-" === OTHER SETTING-------------------------------------------------- 
+" === PLUG SETTING-------------------------------------------------- 
 
 
 " ===
@@ -349,6 +358,7 @@ nnoremap <silent> <C-f> :Files<CR>
 nnoremap <silent> <Leader>f :Rg<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>/ :BLines<CR>
+nnoremap <silent> <Leader>m :Marks<CR>
 nnoremap <silent> <Leader>hh :History<CR>
 nnoremap <silent> <Leader>h: :History:<CR>
 
@@ -486,7 +496,19 @@ map <LEADER>ck :Calendar -view=clock -position=here<CR>
 " ===
 " === rainbow
 " ===
+"au FileType c,cpp,objc,objcpp call rainbow#load()
 let g:rainbow_active = 1
+
+let g:rainbow_load_separately = [
+    \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+    \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+    \ ]
+
+let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
+let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
+
 "let g:rainbow_conf = {
 "\   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
 "\   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
@@ -509,7 +531,3 @@ let g:rainbow_active = 1
 "\       'css': 0,
 "\   }
 "\}
-"
-"
-"
-"
