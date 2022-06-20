@@ -49,7 +49,8 @@ set laststatus=2
 set autochdir
 
 " share clipboard with system
-" set clipboard=unnamedplus
+" (inner registor '+, *')
+set clipboard=unnamedplus
 
 
 " close visual bell & beep
@@ -292,6 +293,10 @@ Plug 'gelguy/wilder.nvim'
 " polyglot
 " A collection of language packs for Vim
 Plug 'sheerun/vim-polyglot'
+
+" visual-registor
+Plug 'junegunn/vim-peekaboo'
+
 
 
 call plug#end()
