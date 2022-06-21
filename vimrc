@@ -94,25 +94,25 @@ set smartcase
 map s <nop>						
 
 " Save & quit
-map S :w<CR>
-map Q :q<CR>
+nnoremap S :w<CR>
+nnoremap Q :q<CR>
 
 " let setting effect
-map R :source $MYVIMRC<CR>				        
+nnoremap R :source $MYVIMRC<CR>				        
 
 " leader+enter --> noh
 noremap <LEADER><CR> :nohlsearch<CR>			
 
 " Open the vimrc file anytime
-map <LEADER>rc :e ~/.vim/vimrc<CR>
+nnoremap <LEADER>rc :e ~/.vim/vimrc<CR>
 
 " ctags
-set tags=tags;
 set tags=./tags;
-set tags+=/usr/include/tags
-map <C-p> :!ctags ./* -R<CR><CR>
+set tags=tags;
+"set tags+=/usr/include/tags
+"nnoremap <C-p> :!ctags ./* -R<CR><CR>
 
-imap jk <Esc>
+inoremap jk <Esc>
 
 " Quick replace <++>
 map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
@@ -130,8 +130,8 @@ noremap <C-y> 5<C-y>
 noremap ` ~
 
 " === split mapping
-map sl :set splitright<CR>:vsplit<CR>			
-map sj :set splitbelow<CR>:split<CR>
+nnoremap sl :set splitright<CR>:vsplit<CR>			
+nnoremap sj :set splitbelow<CR>:split<CR>
 
 
 " === switch window
@@ -296,6 +296,9 @@ Plug 'sheerun/vim-polyglot'
 
 " visual-registor
 Plug 'junegunn/vim-peekaboo'
+
+" auto generate tags
+Plug 'ludovicchabant/vim-gutentags'
 
 
 
