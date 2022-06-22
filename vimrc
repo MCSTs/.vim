@@ -362,8 +362,10 @@ nmap <LEADER>gy :Goyo<CR>
 " === 
 nmap tt :NERDTreeToggle<CR>
 " change tree sign
-let g:NERDTreeDirArrowExpandable = '+'
-let g:NERDTreeDirArrowCollapsible = '-'
+"let g:NERDTreeDirArrowExpandable = '+'
+"let g:NERDTreeDirArrowCollapsible = '-'
+let g:NERDTreeDirArrowExpandable = '▶'
+let g:NERDTreeDirArrowCollapsible = '▼'
 " Window position
 let g:NERDTreeWinPos='left'
 " Window size
