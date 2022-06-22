@@ -155,6 +155,7 @@ map tj :tabnext<CR>
 map tk :tabprev<CR>
 
 
+
 " === Compile and Run with C and C++
 map <Leader>,c :call Compile()<CR>
 func! Compile()
@@ -187,6 +188,19 @@ func! CompileAndRun()
     endif
 endfunc
 
+
+
+
+" switch relativenumber
+function! ToggleNumber()
+    if(&relativenumber == 1)
+        set norelativenumber
+    else
+        set relativenumber
+    endif
+endfunc
+
+nnoremap <Leader><C-q> :call ToggleNumber()<CR>
 
 
 
@@ -514,28 +528,11 @@ let g:rainbow_load_separately = [
     \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
     \ ]
 
+let g:rainbow_conf = {
+\	'separately': {
+\		'nerdtree': 0,
+\	}
+\}
+
 let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
 let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
-
-"let g:rainbow_conf = {
-"\   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-"\   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
-"\   'operators': '_,_',
-"\   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-"\   'separately': {
-"\       '*': {},
-"\       'tex': {
-"\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-"\       },
-"\       'lisp': {
-"\           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-"\       },
-"\       'vim': {
-"\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
-"\       },
-"\       'html': {
-"\           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
-"\       },
-"\       'css': 0,
-"\   }
-"\}
