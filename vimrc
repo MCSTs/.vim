@@ -129,6 +129,9 @@ noremap <C-y> 5<C-y>
 " switch case
 noremap ` ~
 
+" skip buffer
+nnoremap <Leader>\ <C-^>
+
 " === split mapping
 nnoremap sl :set splitright<CR>:vsplit<CR>			
 nnoremap sj :set splitbelow<CR>:split<CR>
@@ -389,7 +392,7 @@ nnoremap <silent> <Leader>h: :History:<CR>
 " ==
 " == NERDTree-git
 " ==
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
