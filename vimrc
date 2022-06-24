@@ -220,7 +220,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'connorholyday/vim-snazzy'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'ayu-theme/ayu-vim'
-Plug 'bling/vim-bufferline'
+
 
 " Git
 Plug 'rhysd/conflict-marker.vim'
@@ -241,6 +241,9 @@ Plug 'Yggdroot/indentLine'
 " vim-move
 Plug 'matze/vim-move'
 
+" AsyncRun
+Plug 'skywind3000/asyncrun.vim'
+Plug 'skywind3000/asynctasks.vim'
 
 " Rainbow
 Plug 'luochen1990/rainbow'
@@ -260,12 +263,12 @@ Plug 'mbbill/undotree'
 " Plug 'tc50cal/vim-terminal'
 
 " syntax check out
-Plug 'dense-analysis/ale'
+"Plug 'dense-analysis/ale'
 
 " code smart complement
-" Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-" Plugin 'ycm-core/YouCompleteMe'
-Plug 'Valloric/YouCompleteMe'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'ycm-core/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 
 " vim -file icon
 Plug 'ryanoasis/vim-devicons'
@@ -299,7 +302,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 
 " vimspector
-Plug 'puremourning/vimspector'
+"Plug 'puremourning/vimspector'
 
 " wilder
 Plug 'gelguy/wilder.nvim'
@@ -343,8 +346,10 @@ set background=dark
 " ===
 "let g:airline_theme='angr'
 "let g:airline_theme='base16_harmonic16'
-let g:airline_theme='jellybeans'
+"let g:airline_theme='jellybeans'
 "let g:airline_theme='alduin'
+let g:airline_theme='lucius'
+
 let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#enable = 1
 
