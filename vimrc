@@ -123,6 +123,7 @@ noremap <C-k> 5k
 noremap <C-h> 7h
 noremap <C-l> 7l
 noremap E $
+noremap W ^
 noremap <C-e> 5<C-e>
 noremap <C-y> 5<C-y>
 
