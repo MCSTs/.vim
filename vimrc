@@ -133,6 +133,10 @@ noremap ` ~
 " skip buffer
 nnoremap <Leader>\ <C-^>
 
+" delete cur-buffer
+nnoremap <Leader>D :bdelete<CR>
+
+
 " === split mapping
 nnoremap sl :set splitright<CR>:vsplit<CR>			
 nnoremap sj :set splitbelow<CR>:split<CR>
