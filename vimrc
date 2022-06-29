@@ -391,8 +391,8 @@ nnoremap <silent> <Leader>f :Rg<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>/ :BLines<CR>
 nnoremap <silent> <Leader>m :Marks<CR>
-nnoremap <silent> <Leader>hh :History<CR>
-nnoremap <silent> <Leader>h: :History:<CR>
+nnoremap <silent> <Leader>HH :History<CR>
+nnoremap <silent> <Leader>H: :History:<CR>
 
 
 
@@ -420,7 +420,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 let g:indentLine_enabled = 0
 
 " switch, on-off
-nnoremap <Leader>lc :IndentLinesToggle<CR>
+nnoremap <Leader>C :IndentLinesToggle<CR>
 
 "indent charactor with 'x'
 "let g:indentLine_char = 'c'
