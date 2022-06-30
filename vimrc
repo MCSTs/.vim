@@ -277,7 +277,7 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'ryanoasis/vim-devicons'
 
 " git-icon
-Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Vim-Wiki 
 " <==> filename.wiki : generate wiki with <Enter> key , backspace  key to return
@@ -372,8 +372,9 @@ nmap tt :NERDTreeToggle<CR>
 " change tree sign
 "let g:NERDTreeDirArrowExpandable = '+'
 "let g:NERDTreeDirArrowCollapsible = '-'
-let g:NERDTreeDirArrowExpandable = '▶'
-let g:NERDTreeDirArrowCollapsible = '▼'
+let g:NERDTreeDirArrowExpandable = '＞'
+let g:NERDTreeDirArrowCollapsible = '∨'
+
 " Window position
 let g:NERDTreeWinPos='left'
 " Window size
@@ -514,18 +515,31 @@ map <LEADER>ck :Calendar -view=clock -position=here<CR>
 
 
 
-" ===
-" === You Complete ME
-" ===
-"nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-"nnoremap g/ :YcmCompleter GetDoc<CR>
-"nnoremap gt :YcmCompleter GetType<CR>
-"nnoremap gr :YcmCompleter GoToReferences<CR>
-let g:ycm_autoclose_preview_window_after_completion=0
+
+ "===
+ "=== You Complete ME
+ "===
+nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap g/ :YcmCompleter GetDoc<CR>
+nnoremap gt :YcmCompleter GetType<CR>
+nnoremap gr :YcmCompleter GoToReferences<CR>
+let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_insertion=1
 "let g:ycm_use_clangd = 1
-""let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
-"let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+"let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+imap <silent> <C-l> <Plug>(YCMToggleSignatureHelp)
+nmap <leader>gs <Plug>(YCMFindSymbolInWorkspace)
+nmap <leader>gd <Plug>(YCMFindSymbolInDocument)
+"set signcolumn=no
+let g:ycm_open_loclist_on_ycm_diags=0
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_auto_hover=''
+nmap <Leader>F <plug>(YCMHover)
+
+
+
+
 
 
 " ===
