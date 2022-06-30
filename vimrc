@@ -537,6 +537,9 @@ let g:ycm_show_diagnostics_ui = 0
 let g:ycm_auto_hover=''
 nmap <Leader>F <plug>(YCMHover)
 
+"let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_seed_identifiers_with_syntax = 1
+set completeopt-=preview
 
 
 
