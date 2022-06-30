@@ -271,9 +271,7 @@ Plug 'mbbill/undotree'
 "Plug 'dense-analysis/ale'
 
 " code smart complement
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'ycm-core/YouCompleteMe'
-" Plug 'Valloric/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 
 " vim -file icon
 Plug 'ryanoasis/vim-devicons'
@@ -523,8 +521,8 @@ map <LEADER>ck :Calendar -view=clock -position=here<CR>
 "nnoremap g/ :YcmCompleter GetDoc<CR>
 "nnoremap gt :YcmCompleter GetType<CR>
 "nnoremap gr :YcmCompleter GoToReferences<CR>
-"let g:ycm_autoclose_preview_window_after_completion=0
-"let g:ycm_autoclose_preview_window_after_insertion=1
+let g:ycm_autoclose_preview_window_after_completion=0
+let g:ycm_autoclose_preview_window_after_insertion=1
 "let g:ycm_use_clangd = 1
 ""let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
 "let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
