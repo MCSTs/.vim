@@ -384,6 +384,8 @@ let g:NERDTreeShowLineNumbers=1
 " Show hidden file
 let g:NERDTreeHidden=1
 
+let NERDTreeMapJumpNextSibling = ""
+let NERDTreeMapJumpPrevSibling = ""
 
 
 
