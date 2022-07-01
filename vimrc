@@ -340,7 +340,7 @@ call plug#end()
 " ===
 " let g:SnazzyTransparent = 1
 colorscheme snazzy
-set background=dark
+"set background=dark
 
 
 
