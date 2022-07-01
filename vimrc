@@ -130,6 +130,14 @@ noremap <C-y> 5<C-y>
 " switch case
 noremap ` ~
 
+
+" operator mapping
+"inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap { {}<Esc>i
+inoremap " ""<Esc>i
+
+
 " skip buffer
 nnoremap <Leader>\ <C-^>
 
