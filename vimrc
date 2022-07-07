@@ -132,10 +132,29 @@ noremap ` ~
 
 
 " operator mapping
-"inoremap ( ()<Esc>i
+inoremap ( ()<Esc>i
+inoremap ) <C-r>=ClosePair(')')<CR>
+
 inoremap [ []<Esc>i
+inoremap ] <C-r>=ClosePair(']')<CR>
+
 inoremap { {}<Esc>i
+inoremap } <C-r>=ClosePair('}')<CR>
+
 inoremap " ""<Esc>i
+inoremap " <C-r>=ClosePair('"')<CR>
+inoremap ' ''<Esc>i
+inoremap ' <C-r>=ClosePair(''')<CR>
+
+function! ClosePair(char)
+    if getline('.')[col('.') - 1] == a:char
+        return "\<Right>"
+    else
+        return a:char
+    endif
+endfunction
+
+
 
 
 " skip buffer
@@ -331,7 +350,8 @@ Plug 'junegunn/vim-peekaboo'
 " auto generate tags
 Plug 'ludovicchabant/vim-gutentags'
 
-
+" F / f to repet find
+Plug 'rhysd/clever-f.vim'
 
 call plug#end()
 " === End Plugins
