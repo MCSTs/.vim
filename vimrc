@@ -141,10 +141,6 @@ inoremap ] <C-r>=ClosePair(']')<CR>
 inoremap { {}<Esc>i
 inoremap } <C-r>=ClosePair('}')<CR>
 
-inoremap " ""<Esc>i
-inoremap " <C-r>=ClosePair('"')<CR>
-inoremap ' ''<Esc>i
-inoremap ' <C-r>=ClosePair(''')<CR>
 
 function! ClosePair(char)
     if getline('.')[col('.') - 1] == a:char
@@ -162,6 +158,11 @@ nnoremap <Leader>\ <C-^>
 
 " delete cur-buffer
 nnoremap <Leader>D :bdelete<CR>
+
+
+" imap <include>
+inoremap <c-h> <nop>
+inoremap <c-h> <c-x><c-x><c-i>
 
 
 " === split mapping
