@@ -359,6 +359,10 @@ Plug 'honza/vim-snippets'
 " easymotion
 Plugin 'easymotion/vim-easymotion'
 
+" vim-surround
+Plugin 'tpope/vim-surround'
+
+
 
 call plug#end()
 " === End Plugins
@@ -465,12 +469,10 @@ let g:indentLine_enabled = 0
 
 " switch, on-off
 nnoremap <Leader>C :IndentLinesToggle<CR>
-
 "indent charactor with 'x'
-"let g:indentLine_char = 'c'
-
+let g:indentLine_char = '|'
 " different level indent 'x'
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+" let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 
 
