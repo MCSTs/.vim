@@ -353,6 +353,12 @@ Plug 'ludovicchabant/vim-gutentags'
 " F / f to repet find
 Plug 'rhysd/clever-f.vim'
 
+" snippets (code segment)
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+
+
 call plug#end()
 " === End Plugins
 
@@ -363,28 +369,31 @@ call plug#end()
 " === PLUG SETTING-------------------------------------------------- 
 
 
-" ===
-" === Snazzy
-" ===
-" let g:SnazzyTransparent = 1
-colorscheme snazzy
-"set background=dark
 
+" === 
+" === colorTheme
+" === 
 
-
-" ===
-" === airline
-" ===
-"let g:airline_theme='angr'
 "let g:airline_theme='base16_harmonic16'
-"let g:airline_theme='jellybeans'
-"let g:airline_theme='alduin'
-let g:airline_theme='lucius'
-
 let g:airline_powerline_fonts = 1
-"let g:airline#extensions#tabline#enable = 1
-
 let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline#extensions#tabline#formatter = 'default'
+
+" --> snazzy
+"let g:SnazzyTransparent = 1
+"colorscheme snazzy
+
+" --> gruvbox
+colorschem gruvbox
+set background=dark
+
+let g:gruvbox_contrast_dark = '(soft)'
+let g:gruvbox_color_column = '(purple)'
+
+
+
 
 
 " === 
@@ -533,6 +542,18 @@ nmap <Leader>dr <Plug>VimspectorRestart
 nmap <Leader>dh <Plug>VimspectorStepOut
 nmap <Leader>dl <Plug>VimspectorStepInto
 nmap <Leader>dj <Plug>VimspectorStepOver
+
+
+
+" ===
+" === snippets 
+" ===
+let g:UltiSnipsExpandTrigger="<c-b>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+let g:UltiSnipsEditSplit="vertical"
+"let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/vim/UltiSnips/', 'UltiSnips']
 
 
 
