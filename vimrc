@@ -407,6 +407,8 @@ set background=dark
 nmap <LEADER>gy :Goyo<CR>
 
 
+
+
 " === 
 " === NERDTree
 " === 
@@ -431,6 +433,8 @@ let NERDTreeMapJumpPrevSibling = ""
 
 
 
+
+
 " ===
 " ===FZF 
 " ===
@@ -441,6 +445,7 @@ nnoremap <silent> <Leader>/ :BLines<CR>
 nnoremap <silent> <Leader>m :Marks<CR>
 nnoremap <silent> <Leader>HH :History<CR>
 nnoremap <silent> <Leader>H: :History:<CR>
+
 
 
 
@@ -458,6 +463,8 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Clean"     : "✔︎",
     \ "Unknown"   : "?"
     \ }
+
+
 
 
 
@@ -483,11 +490,27 @@ let g:indentLine_char = '|'
 call wilder#setup({'modes': [':', '/', '?']})
 
 
+
+
 " ===
 " === vim-move
 " ===
 " move in visual mode
 let g:move_key_modifier_visualmode = 'S'
+
+
+
+
+" ===
+" === vim-surround
+" ===
+map <leader>sl yss
+map <leader>sw ysiw
+map <leader>st yst
+" -->cs(char)(newChar)
+" -->ds(char)
+"  . to repeat last motion surround
+
 
 
 
