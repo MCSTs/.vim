@@ -22,6 +22,13 @@ set hidden
 set mouse=a
 set encoding=utf-8
 
+" forbid generate swap file
+set nobackup       
+set noswapfile     
+set nowritebackup  
+set noundofile     
+
+
 " Prevent incorrect backgroung redering
 let &t_ut=''
 
@@ -504,9 +511,9 @@ let g:move_key_modifier_visualmode = 'S'
 " ===
 " === vim-surround
 " ===
-map <leader>sl yss
-map <leader>sw ysiw
-map <leader>st yst
+nmap <leader>sl yss
+nmap <leader>sw ysiw
+nmap <leader>st yst
 " -->cs(char)(newChar)
 " -->ds(char)
 "  . to repeat last motion surround
