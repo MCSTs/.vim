@@ -115,7 +115,7 @@ set tags=tags;
 inoremap jk <Esc>
 
 " Quick replace <++>
-map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
+" map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 
 " skip through
 noremap <C-j> 5j
@@ -251,15 +251,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'connorholyday/vim-snazzy'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'ayu-theme/ayu-vim'
 
 
 " Git
-Plug 'rhysd/conflict-marker.vim'
+" Plug 'rhysd/conflict-marker.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-signify'
-Plug 'gisphm/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
+" Plug 'mhinz/vim-signify'
+" Plug 'gisphm/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
 
 
 " distraction free writing mode
@@ -309,7 +307,7 @@ Plug 'ryanoasis/vim-devicons'
 
 " Vim-Wiki 
 " <==> filename.wiki : generate wiki with <Enter> key , backspace  key to return
-Plug 'vimwiki/vimwiki'
+" Plug 'vimwiki/vimwiki'
 
 " vim start startify
 " Plug 'mhinz/vim-startify'
@@ -358,6 +356,8 @@ Plug 'rhysd/clever-f.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+" easymotion
+Plugin 'easymotion/vim-easymotion'
 
 
 call plug#end()
@@ -390,8 +390,8 @@ let g:airline#extensions#tabline#enabled = 1
 colorschem gruvbox
 set background=dark
 
-let g:gruvbox_contrast_dark = '(soft)'
-let g:gruvbox_color_column = '(purple)'
+"let g:gruvbox_contrast_dark = '(soft)'
+"let g:gruvbox_color_column = '(purple)'
 
 
 
@@ -518,7 +518,7 @@ let g:asyncrun_open=8
 
 "=== quickfix
 nnoremap <silent> <Leader>q :copen<CR>
-nnoremap <silent> <Leader>Q :cclose<CR>
+nnoremap <silent> <Leader>cq :cclose<CR>
 
 " grep ==> Ripgrep 'rg'
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
