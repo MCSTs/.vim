@@ -138,24 +138,24 @@ noremap <C-y> 5<C-y>
 noremap ` ~
 
 
-" operator mapping
-inoremap ( ()<Esc>i
-inoremap ) <C-r>=ClosePair(')')<CR>
+"" operator mapping
+"inoremap ( ()<Esc>i
+"inoremap ) <C-r>=ClosePair(')')<CR>
 
-inoremap [ []<Esc>i
-inoremap ] <C-r>=ClosePair(']')<CR>
+"inoremap [ []<Esc>i
+"inoremap ] <C-r>=ClosePair(']')<CR>
 
-inoremap { {}<Esc>i
-inoremap } <C-r>=ClosePair('}')<CR>
+"inoremap { {}<Esc>i
+"inoremap } <C-r>=ClosePair('}')<CR>
 
 
-function! ClosePair(char)
-    if getline('.')[col('.') - 1] == a:char
-        return "\<Right>"
-    else
-        return a:char
-    endif
-endfunction
+"function! ClosePair(char)
+"    if getline('.')[col('.') - 1] == a:char
+"        return "\<Right>"
+"    else
+"        return a:char
+"    endif
+"endfunction
 
 
 
@@ -364,10 +364,13 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " easymotion
-Plugin 'easymotion/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
 
 " vim-surround
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
+
+" auto-pair
+Plug 'jiangmiao/auto-pairs'
 
 
 
