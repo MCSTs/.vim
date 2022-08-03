@@ -258,11 +258,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'connorholyday/vim-snazzy'
+Plug 'morhetz/gruvbox'
 
 
 " Git
 " Plug 'rhysd/conflict-marker.vim'
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 " Plug 'mhinz/vim-signify'
 " Plug 'gisphm/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
 
@@ -304,7 +305,7 @@ Plug 'mbbill/undotree'
 "Plug 'dense-analysis/ale'
 
 " code smart complement
-Plug 'ycm-core/YouCompleteMe'
+"Plug 'ycm-core/YouCompleteMe'
 
 " vim -file icon
 Plug 'ryanoasis/vim-devicons'
@@ -325,12 +326,12 @@ Plug 'preservim/nerdcommenter'
 
 " insert table 
 " <==> <Space>tm to switch mode ,  '|' to generate table
-Plug 'dhruvasagar/vim-table-mode'
+"Plug 'dhruvasagar/vim-table-mode'
 
 
 " calendar-vim
 " <==> :Calendar / E / T /?
-Plug 'itchyny/calendar.vim'
+"Plug 'itchyny/calendar.vim'
 
 " fzf
 Plug 'junegunn/fzf.vim'
@@ -357,14 +358,14 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'ludovicchabant/vim-gutentags'
 
 " F / f to repet find
-Plug 'rhysd/clever-f.vim'
+"Plug 'rhysd/clever-f.vim'
 
 " snippets (code segment)
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
 
 " easymotion
-Plug 'easymotion/vim-easymotion'
+"Plug 'easymotion/vim-easymotion'
 
 " vim-surround
 Plug 'tpope/vim-surround'
@@ -618,7 +619,7 @@ imap <silent> <C-l> <Plug>(YCMToggleSignatureHelp)
 nmap <leader>gs <Plug>(YCMFindSymbolInWorkspace)
 nmap <leader>gd <Plug>(YCMFindSymbolInDocument)
 "set signcolumn=no
-let g:ycm_open_loclist_on_ycm_diags=0
+let g:ycm_open_loclist_on_ycm_diags=1
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_auto_hover=''
 nmap <Leader>F <plug>(YCMHover)
