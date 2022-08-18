@@ -429,6 +429,14 @@ xmap ga <Plug>(EasyAlign)
 
 
 
+" ===
+" === auto-pair
+" ===
+let g:AutoPairsMapCh=0
+"let g:AutoPairsFlyMode = 1
+
+
+
 " === 
 " === NERDTree
 " === 
