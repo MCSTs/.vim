@@ -505,7 +505,8 @@ let g:indentLine_enabled = 0
 " switch, on-off
 nnoremap <Leader>C :IndentLinesToggle<CR>
 "indent charactor with 'x'
-let g:indentLine_char = '|'
+"let g:indentLine_char = '┃│▕▏▕▕▕│▏▌┆║▕▏▏▏▌▍▎｜｜︱︳┊'
+let g:indentLine_char = '│'
 " different level indent 'x'
 " let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
