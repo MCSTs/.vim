@@ -97,6 +97,11 @@ set incsearch
 set ignorecase						        
 set smartcase						       
 
+
+" Vertical dividing line
+set fillchars=stlnc:=,vert:\│
+
+
 " Disabling the default s key
 map s <nop>						
 
