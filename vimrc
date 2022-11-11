@@ -701,7 +701,6 @@ set completeopt-=preview
 
 
 
-
 " ===
 " === rainbow
 " ===
